@@ -2,7 +2,9 @@ h1 {
     color: aliceblue;
 }
 
-button {
+.btn { /* CLASS: assegna ai tag con class="btn" le seguenti proprietà */
+        /* arrotondare gli angoli dell'elemento */
+    border-radius: 10px; 
     width: 100px;
     height: 300px;
 }
