@@ -1,10 +1,18 @@
 h1 {
-    color: aliceblue;
+    color: black;
+
+}
+.btn1 { /* CLASS: assegna ai tag con class="btn" le seguenti proprietà */
+    border-radius: 5px;
+    margin: 0 10px;
 }
 
-.btn { /* CLASS: assegna ai tag con class="btn" le seguenti proprietà */
-        /* arrotondare gli angoli dell'elemento */
-    border-radius: 10px; 
-    width: 100px;
-    height: 300px;
+.btn2 {
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.search-bar {
+    padding-bottom: 10px;
+    margin: 5px 10px 10px 10px;
 }
