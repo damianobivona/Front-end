@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background-color: blueviolet;
+}
+
+.box-1 {
+    position: absolute;
+    left: 40px;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    
+}
+
+.box-2 {
+    position: absolute;
+    top: 60px; left: 30px;
+    height: 100px;
+    width: 100px;
+    background-color: yellowgreen;
+}
