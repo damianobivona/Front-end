@@ -1,0 +1,25 @@
+.containter {
+    display: flex;
+    flex-direction: column;
+}
+
+.child {
+    /* display: flex; */
+    background-color: yellowgreen;
+    width: 200px;
+    height: 100px;
+    margin: 25px 25px 25px 25px;
+    justify-content: center;
+}
+
+@media (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .child {
+        width: 200px;
+        height: 400px;
+    }
+} 

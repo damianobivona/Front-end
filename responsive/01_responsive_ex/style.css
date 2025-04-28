@@ -1,0 +1,17 @@
+/* background-color fino a 479px */
+.cont {
+background-color: red;
+} 
+
+/* da 480 px in poi: */
+@media (min-width: 480px) {
+    .cont {background-color: blue;}
+}
+
+@media (min-width: 760px) {
+    .cont {background-color: green;}
+}
+
+@media (min-width: 1024px) {
+    .cont {background-color: yellow;}
+}
