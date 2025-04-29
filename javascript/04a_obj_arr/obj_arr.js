@@ -17,4 +17,4 @@ var listaStudenti =
     }
 ]
 
-console.log(listaStudenti);
+console.log(listaStudenti)
