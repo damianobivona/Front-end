@@ -13,11 +13,17 @@
 }
 
 .button {
-    background-color: lightsalmon;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 10px;
-    border-color: salmon;
+    cursor: pointer;
+        /* cambia la forma del cursone quando va sopra l'elemento */
+    width: fit-content;
+        /* larghezza del bottone = larghezza del contenuto */
+    margin: 20px auto;
 }
 
 .storia {
@@ -39,7 +45,7 @@
     align-items: flex-end;
 }
 
-.descr {
+.namePizza {
     height: 80px;
     width: 200px; 
     padding: 10px 5px 5px 5px;
@@ -55,6 +61,10 @@
     }
 
     .button {
+        display: none;
+    }
+
+    #menu-container {
         display: none;
     }
 
