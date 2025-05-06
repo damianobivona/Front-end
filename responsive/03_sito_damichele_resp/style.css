@@ -2,7 +2,7 @@
 .title {
     display: flex;
     justify-self: center;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 }
 
 .info {
@@ -10,6 +10,18 @@
     justify-self: center;
     justify-content: center;
     margin-bottom: 25px;
+}
+
+.div-button {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+.div-menu-ext {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
 }
 
 .button {
@@ -23,7 +35,10 @@
         /* cambia la forma del cursone quando va sopra l'elemento */
     width: fit-content;
         /* larghezza del bottone = larghezza del contenuto */
-    margin: 20px auto;
+}
+
+#menu-button {
+    margin-top: 15px;
 }
 
 .storia {
@@ -34,22 +49,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
 }
 
 .item {
     display: flex;
-    background-color: orangered;
+    position: relative; /*posiziona in modo assoluto l'overlay*/
+    flex-direction: column;
     width: 200px;
     height: 300px;
-    align-items: flex-end;
+    overflow: hidden; 
+        /* non permette all'img di uscire dai confini del div */
+    border-radius: 10px;
+    }
+
+.pizza-img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
-.namePizza {
-    height: 80px;
-    width: 200px; 
-    padding: 10px 5px 5px 5px;
-    background-color: aquamarine;
+.name-pizza {
+    position: absolute;
+    bottom: 0; /*allinea in basso al div*/
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.3); /* sfondo semi-trasparente */
+    backdrop-filter: blur(8px);                 /* sfocatura dietro */
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-pizza h4 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.name-pizza p {
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
 }
 
 @media (min-width: 600px) {
@@ -82,4 +130,4 @@
         padding: 30px 30px 30px 30px;
         align-items: center;
     }
-} 
+}
