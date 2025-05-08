@@ -3,16 +3,15 @@ const menu = [
       nome: "Margherita",
       ingredienti: "pomodoro, mozzarella, basilico",
       img: "https://picsum.photos/seed/margherita/400/300"
+    },{
+      nome: "Quattro Stagioni",
+      ingredienti: "pomodoro, mozzarella, funghi, carciofi, olive",
+      img: "https://picsum.photos/seed/stagioni/400/300"
     },
     {
       nome: "Diavola",
       ingredienti: "pomodoro, mozzarella, salame piccante",
       img: "https://picsum.photos/seed/diavola/400/300"
-    },
-    {
-      nome: "Quattro Stagioni",
-      ingredienti: "pomodoro, mozzarella, funghi, carciofi, olive",
-      img: "https://picsum.photos/seed/stagioni/400/300"
     },
     {
       nome: "Funghi",
@@ -26,7 +25,6 @@ const menu = [
     }
   ];
   
-
 console.log(menu);
 // cerca e seleziona tutti gli elementi nel documento con la classe .item e .name-pizza,
 // e salvali in due costanti
@@ -65,19 +63,19 @@ const menuContainer = document.getElementById("menu-container");
 
 menuButton.addEventListener("click", function() {
     
-    menuContainer.innerHTML = ""; //svuota il container
+  menuContainer.innerHTML = ""; //svuota il container altrimenti lo scriverebbe più volte
 
     menu.forEach(function(pizza)   {
         const pizzaDiv = document.createElement("div");
             //crea un nuovo div per ciascuna pizza
+
         pizzaDiv.innerHTML = `
-            <img src="${pizza.img}" alt="${pizza.nome}" class="pizza-img">
             <h4>${pizza.nome}</h4>
             <p>${pizza.ingredienti}</p>
-            `; 
-            //è un template LITERAL, ossia una STRINGA DINAMICA dove si possono inserire variabili direttamente dentro il testo. Si usano e BACKTICK ` per renderlo dinamico
+            `; // è un template LITERAL, ossia una STRINGA DINAMICA dove si possono inserire variabili direttamente dentro il testo.
+              // Si usano le BACKTICK ` per renderlo dinamico
         menuContainer.appendChild(pizzaDiv); // inserisce il div (pizzaDiv) appena creato all'interno del container principale (menuContainer)
-            // letteralmente "in menuContainer inserisci come figlio (appendChild) il div creato"
+            // (letteralmente "in menuContainer inserisci come figlio (appendChild) il div creato")
     })
 
 });
