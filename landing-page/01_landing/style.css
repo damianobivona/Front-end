@@ -1,0 +1,55 @@
+/* classi generiche */
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.btn {
+    border-radius: 10px;
+    border: none;
+    background-color: #0c0c0c;
+    color: #FFFFFF;
+    padding: 14px 24px; /* shortcut: il primo valore è per top-bottom, il secondo è per right-left */
+    font-size: 16px;
+}
+
+.h1 { /* è solo un vestito, niente di più. Rimane un h1 anche se lo vesti da h4 */
+    font-size: 64px;
+    margin: 0;
+    font-weight: 800px;
+}
+
+
+/* fine classi generiche */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 67px 80px;
+    align-items: center;
+}
+
+.header .navbar, .header .navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    list-style-type: none;
+    margin: 0;
+    align-items: center;
+}
+
+.hero {
+    width: 100%; /* si può usare anche 100vw (assoluto) */
+    padding: 120px 0;
+}
+
+.hero .hero_content {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
