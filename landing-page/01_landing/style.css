@@ -15,6 +15,7 @@
     color: #FFFFFF;
     padding: 14px 24px; /* shortcut: il primo valore è per top-bottom, il secondo è per right-left */
     font-size: 16px;
+    width: fit-content;
 }
 
 .h1 { /* è solo un vestito, niente di più. Rimane un h1 anche se lo vesti da h4 */
@@ -23,6 +24,9 @@
     font-weight: 800px;
 }
 
+.space {
+    padding: 0 80px;
+}
 
 /* fine classi generiche */
 
@@ -53,3 +57,38 @@
     width: fit-content;
     text-align: center;
 }
+
+.feature-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: red 2px solid;
+}
+
+.feature-section .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.feature-section .feature-content div {
+    width: 80%;
+}
+
+.feature-section .feature-img {
+    width: 50%;
+}
+
+.feature-section .feature-img img {
+    max-height: 400px;
+    object-fit: cover;
+
+    border: rgb(27, 62, 201) 2px solid;
+}
+
+.reverse { /*potrei mettere uno style interno all'HTML, funziona uguale obv*/
+    flex-direction: row-reverse;
+}
+
