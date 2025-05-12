@@ -26,6 +26,7 @@ const menu = [
   ];
   
 console.log(menu);
+
 // cerca e seleziona tutti gli elementi nel documento con la classe .item e .name-pizza,
 // e salvali in due costanti
 const itemDivs = document.querySelectorAll(".item"); 
@@ -78,4 +79,5 @@ menuButton.addEventListener("click", function() {
             // (letteralmente "in menuContainer inserisci come figlio (appendChild) il div creato")
     })
 
-});
+}
+);
