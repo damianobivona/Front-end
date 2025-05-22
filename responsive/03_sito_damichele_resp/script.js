@@ -2,26 +2,31 @@ const menu = [
     {
       nome: "Margherita",
       ingredienti: "pomodoro, mozzarella, basilico",
-      img: "https://picsum.photos/seed/margherita/400/300"
+      img: "https://picsum.photos/seed/margherita/400/300",
+      prezzo: "e 7,00"
     },{
       nome: "Quattro Stagioni",
       ingredienti: "pomodoro, mozzarella, funghi, carciofi, olive",
-      img: "https://picsum.photos/seed/stagioni/400/300"
+      img: "https://picsum.photos/seed/stagioni/400/300",
+      prezzo: "e 7,00"
     },
     {
       nome: "Diavola",
       ingredienti: "pomodoro, mozzarella, salame piccante",
-      img: "https://picsum.photos/seed/diavola/400/300"
+      img: "https://picsum.photos/seed/diavola/400/300",
+      prezzo: "e 7,00"
     },
     {
       nome: "Funghi",
       ingredienti: "pomodoro, mozzarella, funghi",
-      img: "https://picsum.photos/seed/funghi/400/300"
+      img: "https://picsum.photos/seed/funghi/400/300",
+      prezzo: "e 7,00"
     },
     {
       nome: "Pistacchio",
       ingredienti: "mozzarella, mortadella, granella di pistacchio",
-      img: "https://picsum.photos/seed/pistacchio/400/300"
+      img: "https://picsum.photos/seed/pistacchio/400/300",
+      prezzo: "e 7,00"
     }
   ];
   
@@ -67,16 +72,30 @@ menuButton.addEventListener("click", function() {
   menuContainer.innerHTML = ""; //svuota il container altrimenti lo scriverebbe più volte
 
     menu.forEach(function(pizza)   {
-        const pizzaDiv = document.createElement("div");
+      const pizzaDiv = document.createElement("div");
+      pizzaDiv.classList.add("pizza-div");
             //crea un nuovo div per ciascuna pizza
 
-        pizzaDiv.innerHTML = `
-            <h4>${pizza.nome}</h4>
-            <p>${pizza.ingredienti}</p>
-            `; // è un template LITERAL, ossia una STRINGA DINAMICA dove si possono inserire variabili direttamente dentro il testo.
+      const pizzaInfo = document.createElement("div");
+      pizzaInfo.classList.add("pizza-info");
+      pizzaDiv.appendChild(pizzaInfo);
+
+
+      const pizzaDescription = document.createElement("div")
+      pizzaDescription.classList.add("pizza-description");
+      pizzaDiv.appendChild(pizzaDescription);
+        
+      
+
+      pizzaDiv.innerHTML = `
+          <h4>${pizza.nome}</h4>
+          <p>${pizza.ingredienti}</p>
+          <h5>${pizza.prezzo}</h5>
+          `; // è un template LITERAL, ossia una STRINGA DINAMICA dove si possono inserire variabili direttamente dentro il testo.
               // Si usano le BACKTICK ` per renderlo dinamico
         menuContainer.appendChild(pizzaDiv); // inserisce il div (pizzaDiv) appena creato all'interno del container principale (menuContainer)
             // (letteralmente "in menuContainer inserisci come figlio (appendChild) il div creato")
+        // pizzaDiv.appendChild(pizzaDescr);    
     })
 
 }

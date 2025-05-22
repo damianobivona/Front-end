@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
 }
 
 .button {
@@ -103,6 +104,27 @@ body {
     font-size: 12px;
     margin: 0;
     padding: 5px;
+}
+
+#menu-container p {
+    font-size: 15px
+    
+}
+
+ .pizza-div {
+    margin: 0 auto; /* da usare quando il padre non è flex*/
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.pizza-div .pizza-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 
 /* approccio mobile first */
