@@ -69,34 +69,71 @@ const menuContainer = document.getElementById("menu-container");
 
 menuButton.addEventListener("click", function() {
     
-  menuContainer.innerHTML = ""; //svuota il container altrimenti lo scriverebbe più volte
+  function creaPizzaElement(pizzaData) {
+    // Trova il nodo template nel DOM
+    const template = document.querySelector('.pizza-div');
 
-    menu.forEach(function(pizza)   {
-      const pizzaDiv = document.createElement("div");
-      pizzaDiv.classList.add("pizza-div");
-            //crea un nuovo div per ciascuna pizza
+    // Clona il nodo (deep clone = true per includere anche i figli)
+    const nuovaPizza = template.cloneNode(true);
 
-      const pizzaInfo = document.createElement("div");
-      pizzaInfo.classList.add("pizza-info");
-      pizzaDiv.appendChild(pizzaInfo);
+    // Popola il clone con i dati forniti
+    nuovaPizza.querySelector('.name').textContent = pizzaData.nome;
+    nuovaPizza.querySelector('.price').textContent = pizzaData.prezzo;
+    nuovaPizza.querySelector('.pizza-description').textContent = pizzaData.ingredienti;
+
+    return nuovaPizza;
+
+  }
+
+  menu.forEach((pizza) => {
+    console.log(pizza);
+    const container = document.querySelector('#menu-container');
+    const nuovaPizza = creaPizzaElement(pizza) 
+    container.insertAdjacentElement("beforebegin", nuovaPizza);
+
+  });
+
+});
 
 
-      const pizzaDescription = document.createElement("div")
-      pizzaDescription.classList.add("pizza-description");
-      pizzaDiv.appendChild(pizzaDescription);
+
+  // menuContainer.innerHTML = ""; //svuota il container altrimenti lo scriverebbe più volte
+  
+
+    // menu.forEach((pizza)  => { //funzione anonima
+//       const pizzaDiv = document.createElement("div");
+//       pizzaDiv.classList.add("pizza-div");
+//             //crea un nuovo div per ciascuna pizza
+
+//       const pizzaInfo = document.createElement("div");
+//       pizzaInfo.classList.add("pizza-info");
+//       pizzaDiv.appendChild(pizzaInfo);
+
+//       const pizzaName = document.createElement("div");
+//       pizzaName.classList.add("name");
+//       pizzaInfo.appendChild(pizzaName);
+
+//       const pizzaPrice = document.createElement("div");
+//       pizzaPrice.classList.add("price");
+//       pizzaInfo.appendChild(pizzaPrice);
+
+//       const pizzaDescription = document.createElement("div")
+//       pizzaDescription.classList.add("pizza-description");
+//       pizzaDiv.appendChild(pizzaDescription);
         
-      
+// pizzaName.innerHTML = `<h4>${pizza.nome}</h4>`;
+// pizzaPrice.innerHTML = `<h5>${pizza.prezzo}</h5>`;
+// pizzaDescription.innerHTML = `<p>${pizza.ingredienti}</p>`;
 
-      pizzaDiv.innerHTML = `
-          <h4>${pizza.nome}</h4>
-          <p>${pizza.ingredienti}</p>
-          <h5>${pizza.prezzo}</h5>
-          `; // è un template LITERAL, ossia una STRINGA DINAMICA dove si possono inserire variabili direttamente dentro il testo.
+
+
+
+// è un template LITERAL, ossia una STRINGA DINAMICA dove si possono inserire variabili direttamente dentro il testo.
               // Si usano le BACKTICK ` per renderlo dinamico
-        menuContainer.appendChild(pizzaDiv); // inserisce il div (pizzaDiv) appena creato all'interno del container principale (menuContainer)
+        /* menuContainer.appendChild(pizzaDiv);*/ // inserisce il div (pizzaDiv) appena creato all'interno del container principale (menuContainer)
             // (letteralmente "in menuContainer inserisci come figlio (appendChild) il div creato")
         // pizzaDiv.appendChild(pizzaDescr);    
-    })
+    // })
 
-}
-);
+// }
+// )
