@@ -18,7 +18,7 @@ body {
 /*  */
 .info .div-button {
     justify-self: center; 
-        /* chiedere a ste quale è più corretto */
+        /* chiedere quale è più corretto */
     justify-content: center; 
 }
 
@@ -120,7 +120,7 @@ body {
     width: 70%;
 }
 
-.pizza-div .pizza-info { /* sintassi per indicare in maniera precisa il container al quale applicare le proprietà */
+.pizza-div .pizza-info { /* sintassi per indicare in maniera precisa il container al quale applicare le proprietà guardando la paternità */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
