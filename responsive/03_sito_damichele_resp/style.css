@@ -120,7 +120,7 @@ body {
     width: 70%;
 }
 
-.pizza-div .pizza-info {
+.pizza-div .pizza-info { /* sintassi per indicare in maniera precisa il container al quale applicare le proprietà */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
